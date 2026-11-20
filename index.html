@@ -245,6 +245,12 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 
 .modal-box p { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  /* ---- Yuklab olish tugmalari: telefonda chetga chiqmasligi uchun ---- */
+.dl-row { display: grid; grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 10px; }
+.dl-row .btn { min-width: 0; width: 100%; padding: 0 8px; gap: 6px; white-space: normal; text-align: center; line-height: 1.15; }
+@media (max-width: 640px) {
+  .dl-row .btn { flex-direction: column; gap: 4px; min-height: 58px; padding: 8px 4px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
